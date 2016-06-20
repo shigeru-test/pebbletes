@@ -6,8 +6,8 @@
 function SaveBtn() {
 
 var options = {start:'abc', end:'123'};
-var location_uri = "pebblejs://close#" + JSON.stringify(options);
-document.location = location_uri;
+var location_uri = "pebblejs://close#success" + JSON.stringify(options);
+document.href  = location_uri;
 console.log(location_uri);
 }
 
