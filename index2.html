@@ -7,6 +7,12 @@ function saveOptions() {
 	var sendValue =[colorValue];
 	return sendValue;
 }
+function SaveBtn() {
+window.alert('b-save');
+		console.log("Save");
+		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
+		document.location = location;
+}
 
 $().ready(function() 
 	{
@@ -34,8 +40,7 @@ window.alert('b-save');
 	<option value="3">red</option>
 </select>
 </p>
-<p><input type="submit" id="b-save" value="save"></input></p>
-<p><input type="submit" id="b-cancel" value="cancel"></input></p>
+<p><button onClick="SaveBtn()"></button></p>
 </form>
 </body>
 </html>
