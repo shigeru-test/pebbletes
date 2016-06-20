@@ -10,24 +10,11 @@ function saveOptions() {
 function SaveBtn() {
 window.alert('b-save');
 		console.log("Save");
-		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
-		document.location = location;
+		var loc = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
+		location.href = loc;
 }
 
-$().ready(function() 
-	{
-	$("#b-cancel").click(function() 
-		{
-		console.log("Canceling");
-		document.location = "pebblejs://close";
-	});
-	$("#b-save").click(function() {
-window.alert('b-save');
-		console.log("Save");
-		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
-		document.location = location;
-	});
-});
+
 </script>
 
 <body>
@@ -40,7 +27,7 @@ window.alert('b-save');
 	<option value="3">red</option>
 </select>
 </p>
-<p><button onClick="SaveBtn()"></button></p>
+<p><input type="button" valuse="Save" onClick="SaveBtn()"></p>
 </form>
 </body>
 </html>
