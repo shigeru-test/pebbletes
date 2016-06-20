@@ -2,16 +2,11 @@
 <head></head> 
 
 <script>
-function saveOptions() {
-	var colorValue = parseInt($('#color').val());
-	var sendValue =[colorValue];
-	return sendValue;
-}
 
 function SaveBtn() {
 window.alert('b-save');
 
-var options = {start:'value1, end:'value2'};
+var options = {start:'abc', end:'123'};
 var location_uri = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
 document.location = location_uri;
 }
