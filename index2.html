@@ -16,7 +16,7 @@ $().ready(function()
 	});
 	$("#b-save").click(function() {
 		console.log("Save");
-		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
+		var location = "pebblejs:///close#success" + encodeURIComponent(JSON.stringify(saveOptions()));
 		document.location = location;
 	});
 });
