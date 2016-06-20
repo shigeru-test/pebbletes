@@ -1,5 +1,6 @@
 <html> 
 <head></head> 
+
 <script>
 function saveOptions() {
 	var colorValue = parseInt($('#color').val());
@@ -15,12 +16,14 @@ $().ready(function()
 		document.location = "pebblejs://close";
 	});
 	$("#b-save").click(function() {
+window.alert('b-save');
 		console.log("Save");
-		var location = "pebblejs:///close#success" + encodeURIComponent(JSON.stringify(saveOptions()));
+		var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
 		document.location = location;
 	});
 });
 </script>
+
 <body>
 <form>
 <p>
