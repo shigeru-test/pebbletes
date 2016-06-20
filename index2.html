@@ -8,11 +8,11 @@ function saveOptions() {
 	return sendValue;
 }
 function SaveBtn() {
-window.alert('b-save');
 		console.log("Save");
-		var loc = "pebblejs://close#" + encodeURIComponent(JSON.stringify(saveOptions()));
-		location.href = loc;
-}
+window.alert('b-save');
+var options = {start:'value1, end:'value2'};
+var location_uri = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
+document.location = location_uri;}
 
 
 </script>
