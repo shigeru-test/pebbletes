@@ -22,6 +22,8 @@ function SaveBtn() {
 var options = {start:'abc', end:'123'};
 var returnTo = getQueryParam('return_to', 'pebblejs://close#');
 document.location = returnTo + encodeURIComponent(JSON.stringify(options));
+
+window.open('about:blank','_self').close();
 return false;
 }
 
